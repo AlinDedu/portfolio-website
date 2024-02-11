@@ -35,14 +35,15 @@ const HeroSection = () => {
 						/>
 					</h1>
 					<p className='text-[#ADB7BE] mb-6 text-base sm:text-lg lg:text-xl'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptatum quibusdam autem porro?
-						Culpa vel cumque animi laudantium expedita non consequatur, similique, sit beatae voluptatibus velit
-						veritatis corrupti dolor!
+						Passionate Full Stack Developer and Software Engineer with a strong foundation in Java, JavaScript, and
+						cutting-edge technologies. Results-driven and disciplined professional with a background in the Romanian
+						Army, specializing in strategic planning and execution. Transitioned to software development, focusing on
+						React, Spring, Node.js, and more.
 					</p>
 					<div>
-						<button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white'>
+						{/* <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white'>
 							Hire Me
-						</button>
+						</button> */}
 						<button
 							className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3'
 							onClick={downloadCV}>

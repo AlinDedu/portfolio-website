@@ -7,57 +7,63 @@ import { motion, useInView } from 'framer-motion';
 const projectsData = [
 	{
 		id: 1,
-		title: 'Project 1',
-		description: 'Project 1 Description',
-		image: '/images/projects/1.jpg',
+		title: 'GoBiz - Ecommerce Website',
+		description:
+			'GoBiz is a streamlined Ecommerce platform focused on enhancing online buying and selling. Offering a user-friendly interface and advanced features, it prioritizes efficiency, user experience, and information security.',
+		features:
+			'Technologies include Stripe for secure payments, Google OAuth for user authentication, bcrypt.js for password encryption, and JWT for managing authentication sessions.',
+		image: '/images/projects/gobiz.jpeg',
 		tag: ['All', 'Web'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/AlinDedu/gobiz',
+		previewUrl: 'https://gobiz.onrender.com/',
 	},
 	{
 		id: 2,
-		title: 'Project 2',
-		description: 'Project 2 Description',
-		image: '/images/projects/1.jpg',
+		title: 'Mask Stock',
+		description:
+			'The Hospital Management System is a web application designed for efficient hospital data management, featuring user authentication and hospital order management through a user-friendly interface.',
+		features:
+			'Efficiently manage hospital records with user authentication, order management, and a user-friendly interface, utilizing React, React hooks, and a RESTful API for server-side interactions.',
+		image: '/images/projects/mask-stock.jpeg',
 		tag: ['All', 'Web'],
-		gitUrl: '/',
+		gitUrl: 'https://github.com/AlinDedu/mask-stock-AlinDedu',
 	},
-	{
-		id: 3,
-		title: 'Project 3',
-		description: 'Project 3 Description',
-		image: '/images/projects/1.jpg',
-		tag: ['All', 'Web'],
-		gitUrl: '/',
-		previewUrl: '/',
-	},
-	{
-		id: 4,
-		title: 'Project 4',
-		description: 'Project 4 Description',
-		image: '/images/projects/1.jpg',
-		tag: ['All', 'Mobile'],
-		gitUrl: '/',
-		previewUrl: '/',
-	},
-	{
-		id: 5,
-		title: 'Project 5',
-		description: 'Project 5 Description',
-		image: '/images/projects/1.jpg',
-		tag: ['All', 'Web'],
-		gitUrl: '/',
-		previewUrl: '/',
-	},
-	{
-		id: 6,
-		title: 'Project 6',
-		description: 'Project 6 Description',
-		image: '/images/projects/1.jpg',
-		tag: ['All', 'Web'],
-		gitUrl: '/',
-		previewUrl: '/',
-	},
+	// {
+	// 	id: 3,
+	// 	title: 'Project 3',
+	// 	description: 'Project 3 Description',
+	// 	image: '/images/projects/1.jpg',
+	// 	tag: ['All', 'Web'],
+	// 	gitUrl: '/',
+	// 	previewUrl: '/',
+	// },
+	// {
+	// 	id: 4,
+	// 	title: 'Project 4',
+	// 	description: 'Project 4 Description',
+	// 	image: '/images/projects/1.jpg',
+	// 	tag: ['All', 'Mobile'],
+	// 	gitUrl: '/',
+	// 	previewUrl: '/',
+	// },
+	// {
+	// 	id: 5,
+	// 	title: 'Project 5',
+	// 	description: 'Project 5 Description',
+	// 	image: '/images/projects/1.jpg',
+	// 	tag: ['All', 'Web'],
+	// 	gitUrl: '/',
+	// 	previewUrl: '/',
+	// },
+	// {
+	// 	id: 6,
+	// 	title: 'Project 6',
+	// 	description: 'Project 6 Description',
+	// 	image: '/images/projects/1.jpg',
+	// 	tag: ['All', 'Web'],
+	// 	gitUrl: '/',
+	// 	previewUrl: '/',
+	// },
 ];
 
 const ProjectsSection = () => {
@@ -90,7 +96,12 @@ const ProjectsSection = () => {
 				<ProjectTag onClick={handleTagChange} name='Web' isSelected={tag === 'Web'} />
 				<ProjectTag onClick={handleTagChange} name='Mobile' isSelected={tag === 'Mobile'} />
 			</div>
-			<ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
+			{filterProjects.length === 0 && (
+				<div className='text-center text-2xl font-semibold text-white mt-8 mb-8 md:mt-12 md:mb-12'>
+					<p>No projects finished yet</p>
+				</div>
+			)}
+			<ul ref={ref} className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 xl:gap-12'>
 				{filterProjects.map((project, index) => (
 					<motion.li
 						key={index}
@@ -102,6 +113,7 @@ const ProjectsSection = () => {
 							key={project.id}
 							title={project.title}
 							description={project.description}
+							features={project.features}
 							imgUrl={project.image}
 							gitUrl={project.gitUrl}
 							previewUrl={project.previewUrl}
