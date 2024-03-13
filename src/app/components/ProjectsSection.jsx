@@ -28,15 +28,17 @@ const projectsData = [
 		tag: ['All', 'Web'],
 		gitUrl: 'https://github.com/AlinDedu/mask-stock-AlinDedu',
 	},
-	// {
-	// 	id: 3,
-	// 	title: 'Project 3',
-	// 	description: 'Project 3 Description',
-	// 	image: '/images/projects/1.jpg',
-	// 	tag: ['All', 'Web'],
-	// 	gitUrl: '/',
-	// 	previewUrl: '/',
-	// },
+	{
+		id: 3,
+		title: 'Math Game',
+		description:
+			"This is my first Android Application. It's a small application that can be used by kids and grown ups to test their math knowledge",
+		features:
+			'The app is built using Java, the primary programming language for Android development, along with Gradle, the build automation tool widely adopted within the Android development community.',
+		image: '/images/projects/math-game.png',
+		tag: ['All', 'Mobile'],
+		gitUrl: 'https://github.com/AlinDedu/first-android-app-math-game',
+	},
 	// {
 	// 	id: 4,
 	// 	title: 'Project 4',
